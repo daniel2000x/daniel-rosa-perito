@@ -1,31 +1,92 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!doctype html>
+<html lang="pt-BR">
 
-html {
-  scroll-behavior: smooth;
-}
+  <head>
+    <meta charset="UTF-8" />
 
-body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
 
-  font-family: Arial, Helvetica, sans-serif;
+    <title>
+      Daniel Rosa | Perito Judicial em Tecnologia da Informação
+    </title>
 
-  background-color: #f8fafc;
-  color: #0f172a;
-}
+    <meta
+      name="description"
+      content="Daniel Rosa, Perito Judicial em Tecnologia da Informação. Atuação em perícias judiciais envolvendo sistemas, assinaturas eletrônicas e digitais, documentos digitais, evidências digitais, logs, dados e ambientes computacionais."
+    />
 
-button,
-input,
-textarea {
-  font: inherit;
-}
+    <meta
+      name="author"
+      content="Daniel Rosa"
+    />
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+    <meta
+      name="robots"
+      content="index, follow"
+    />
+
+    <link
+      rel="canonical"
+      href="https://www.danielrosaperito.com.br/"
+    />
+
+    <meta
+      property="og:title"
+      content="Daniel Rosa | Perito Judicial em Tecnologia da Informação"
+    />
+
+    <meta
+      property="og:description"
+      content="Atuação profissional em perícias judiciais relacionadas à Tecnologia da Informação, com atendimento em âmbito nacional."
+    />
+
+    <meta
+      property="og:type"
+      content="website"
+    />
+
+    <meta
+      property="og:url"
+      content="https://www.danielrosaperito.com.br/"
+    />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Daniel Rosa",
+      "jobTitle": "Perito Judicial em Tecnologia da Informação",
+      "url": "https://www.danielrosaperito.com.br/",
+      "email": "mailto:danielrosa_1@hotmail.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/daniel-rosa-ti/",
+        "https://github.com/daniel2000x"
+      ],
+      "knowsAbout": [
+        "Perícia Judicial",
+        "Tecnologia da Informação",
+        "Assinaturas Eletrônicas",
+        "Assinaturas Digitais",
+        "Documentos Digitais",
+        "Sistemas de Informação",
+        "Logs",
+        "Evidências Digitais",
+        "Bancos de Dados"
+      ]
+    }
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <script
+      type="module"
+      src="/src/main.jsx"
+    ></script>
+  </body>
+
+</html>

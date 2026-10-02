@@ -78,95 +78,96 @@ const totalNomeacoes =
       <main>
 
         {/* PRIMEIRA TELA */}
-        <section className="hero" id="inicio">
+      {/* PRIMEIRA TELA */}
+<section className="hero" id="inicio">
 
-          <div className="container hero-content">
+  <div className="container hero-content">
 
-            <div className="hero-text">
+    <div className="hero-text">
 
-              <span className="hero-label">
-                PERÍCIA JUDICIAL • TECNOLOGIA DA INFORMAÇÃO
-              </span>
-
-              <h1>
-                Perícia técnica com
-                <span> precisão, método e objetividade.</span>
-              </h1>
-
-              <p>
-                Atuação profissional em perícias judiciais relacionadas à
-                Tecnologia da Informação, com atendimento em âmbito nacional.
-              </p>
-
-              <div className="hero-buttons">
-
-                <a href="#atuacao" className="button-primary">
-                  Conhecer minha atuação
-                </a>
-
-                <a href="#contato" className="button-secondary">
-                  Entrar em contato
-                </a>
-
-              </div>
-
-
-              <div className="hero-info">
-
-                <div>
-                  <strong>Atuação Nacional</strong>
-                  <span>Ampla cobertura no Brasil</span>
-                </div>
-
-                <div>
-                  <strong>Tecnologia da Informação</strong>
-                  <span>Conhecimento técnico especializado</span>
-                </div>
-
-                <div>
-                  <strong>Perícia Judicial</strong>
-                  <span>Análise técnica e imparcial</span>
-                </div>
-
-              </div>
-
-            </div>
-
-
-           <div className="hero-visual">
-
-  <div className="hero-photo-card">
-
-    <img
-      src={fotoDaniel}
-      alt="Daniel Rosa - Perito Judicial em Tecnologia da Informação"
-      className="hero-photo"
-    />
-
-    <div className="hero-photo-overlay">
-
-      <span>
-        PERITO JUDICIAL
+      <span className="hero-label">
+        PERÍCIA JUDICIAL • DIREITO • TECNOLOGIA • CIBERSEGURANÇA
       </span>
 
-      <h2>
-        Daniel Rosa
-      </h2>
+      <h1>
+        Perícia digital com
+        <span> precisão, método e visão multidisciplinar.</span>
+      </h1>
 
       <p>
-        Tecnologia da Informação
+        Atuação em perícia digital com integração entre Direito e
+        Tecnologia da Informação, análise de assinaturas eletrônicas,
+        evidências digitais, blockchain, prova de vida, registros
+        computacionais e incidentes cibernéticos, com atendimento
+        em âmbito nacional.
       </p>
+
+      <div className="hero-buttons">
+
+        <a href="#atuacao" className="button-primary">
+          Conhecer minha atuação
+        </a>
+
+        <a href="#contato" className="button-secondary">
+          Entrar em contato
+        </a>
+
+      </div>
+
+      <div className="hero-info">
+
+        <div>
+          <strong>Direito + Tecnologia</strong>
+          <span>Visão técnica e jurídica integrada</span>
+        </div>
+
+        <div>
+          <strong>Cibersegurança</strong>
+          <span>Análise de evidências e incidentes digitais</span>
+        </div>
+
+        <div>
+          <strong>Atuação Nacional</strong>
+          <span>Experiência em nomeações em diferentes tribunais</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div className="hero-visual">
+
+      <div className="hero-photo-card">
+
+        <img
+          src={fotoDaniel}
+          alt="Daniel Rosa - Perito Judicial em Tecnologia da Informação"
+          className="hero-photo"
+        />
+
+        <div className="hero-photo-overlay">
+
+          <span>
+            PERITO JUDICIAL
+          </span>
+
+          <h2>
+            Daniel Rosa
+          </h2>
+
+          <p>
+            Direito • Tecnologia • Perícia Digital
+          </p>
+
+        </div>
+
+      </div>
 
     </div>
 
   </div>
 
-</div>
-
-          </div>
-
-        </section>
-
+</section>
 
         {/* SOBRE */}
         <section className="about" id="sobre">
@@ -175,86 +176,85 @@ const totalNomeacoes =
 
             <div className="about-heading">
 
-              <span className="section-label">
-                SOBRE O PROFISSIONAL
-              </span>
+  <span className="section-label">
+    SOBRE O PROFISSIONAL
+  </span>
 
-              <h2>
-                Tecnologia aplicada à
-                <span> prova pericial.</span>
-              </h2>
+  <h2>
+    Direito e Tecnologia aplicados à
+    <span> prova digital.</span>
+  </h2>
 
-            </div>
+</div>
 
+<div className="about-text">
 
-            <div className="about-text">
+  <p>
+    Daniel Rosa é Bacharel em Direito e Tecnólogo em Análise e
+    Desenvolvimento de Sistemas, reunindo formação jurídica e
+    tecnológica aplicada à interpretação técnica de provas digitais
+    e à apresentação clara dos achados ao Juízo.
+  </p>
 
-              <p>
-                Daniel Rosa atua como Perito Judicial na área de Tecnologia da
-                Informação, prestando suporte técnico especializado em demandas
-                que envolvem sistemas, dados, ambientes computacionais e outros
-                elementos relacionados à tecnologia.
-              </p>
+  <p>
+    Possui pós-graduações em Arquitetura e Gestão de Infraestrutura
+    em TI, Desenvolvimento Web Full Stack e Perícia Judicial com
+    ênfase em Crimes Cibernéticos. Atua como Perito Judicial em
+    Tecnologia da Informação, com experiência em nomeações por
+    tribunais de diferentes estados do país.
+  </p>
 
-              <p>
-                O trabalho pericial é conduzido com foco em objetividade,
-                fundamentação técnica e clareza, buscando apresentar ao Juízo
-                elementos técnicos compreensíveis e adequadamente documentados.
-              </p>
+  <p>
+    Sua trajetória profissional também inclui experiência em
+    Telemática e Processamento de Dados na Marinha do Brasil,
+    além de certificações Cisco em Cibersegurança, Inteligência
+    Artificial e CCNA: Introduction to Networks.
+  </p>
 
-            </div>
+</div>
 
 
             <div className="about-cards">
 
-              <div className="about-card">
+  <div className="about-card">
+    <span>01</span>
 
-                <span>01</span>
+    <h3>Direito + Tecnologia</h3>
 
-                <h3>
-                  Atuação Judicial
-                </h3>
-
-                <p>
-                  Trabalho técnico voltado à produção e análise de elementos
-                  periciais em processos judiciais.
-                </p>
-
-              </div>
+    <p>
+      Formação jurídica e tecnológica aplicada à análise de
+      evidências digitais, com linguagem técnica clara,
+      objetiva e adequada ao contexto processual.
+    </p>
+  </div>
 
 
-              <div className="about-card">
+  <div className="about-card">
+    <span>02</span>
 
-                <span>02</span>
+    <h3>Formação Especializada</h3>
 
-                <h3>
-                  Tecnologia da Informação
-                </h3>
-
-                <p>
-                  Conhecimento técnico aplicado à análise de sistemas,
-                  dados e ambientes computacionais.
-                </p>
-
-              </div>
+    <p>
+      Bacharel em Direito, Tecnólogo em Análise e Desenvolvimento
+      de Sistemas e pós-graduado em infraestrutura de TI,
+      desenvolvimento Full Stack e perícia judicial cibernética.
+    </p>
+  </div>
 
 
-              <div className="about-card">
+  <div className="about-card">
+    <span>03</span>
 
-                <span>03</span>
+    <h3>Experiência e Certificações</h3>
 
-                <h3>
-                  Atuação Nacional
-                </h3>
+    <p>
+      Experiência em nomeações judiciais em diferentes tribunais,
+      atuação em Telemática e Processamento de Dados e certificações
+      Cisco em Cibersegurança, Inteligência Artificial e redes.
+    </p>
+  </div>
 
-                <p>
-                  Cadastro profissional para atuação pericial em diferentes
-                  estados brasileiros.
-                </p>
-
-              </div>
-
-            </div>
+</div>
 
           </div>
 
@@ -433,6 +433,53 @@ const totalNomeacoes =
       objetivo, documentado e fundamentado.
     </p>
   </article>
+
+  <article className="service-card">
+  <span className="service-number">11</span>
+
+  <h3>
+    Biometria, Selfie e Prova de Vida
+  </h3>
+
+  <p>
+    Análise técnica de mecanismos de biometria, selfie,
+    prova de vida, registros de autenticação e demais
+    elementos utilizados na confirmação de identidade
+    em contratações e operações digitais.
+  </p>
+</article>
+
+
+<article className="service-card">
+  <span className="service-number">12</span>
+
+  <h3>
+    Blockchain e Transações Digitais
+  </h3>
+
+  <p>
+    Análise de transações em blockchain, endereços,
+    hashes, registros distribuídos, autorizações,
+    transferências e demais vestígios técnicos relacionados
+    a ativos e operações digitais.
+  </p>
+</article>
+
+
+<article className="service-card">
+  <span className="service-number">13</span>
+
+  <h3>
+    Cibersegurança e Incidentes Digitais
+  </h3>
+
+  <p>
+    Exame de registros associados a incidentes e ataques
+    cibernéticos, eventos de segurança, acessos, logs,
+    endereços IP e outros vestígios digitais relevantes
+    ao objeto da perícia.
+  </p>
+</article>
 
 </div>
 

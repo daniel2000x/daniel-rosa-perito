@@ -1,16 +1,52 @@
-# React + Vite
+# Daniel Rosa | Perito Judicial em Tecnologia da Informação
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site profissional desenvolvido para apresentar minha atuação como
+Perito Judicial em Tecnologia da Informação.
 
-Currently, two official plugins are available:
+🌐 https://www.danielrosaperito.com.br
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Sobre
 
-## React Compiler
+Atuação profissional em perícia digital, reunindo conhecimentos de
+Direito e Tecnologia da Informação aplicados à análise de evidências
+digitais e à produção da prova pericial.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Áreas de atuação
 
-## Expanding the ESLint configuration
+- Assinaturas eletrônicas e digitais
+- Evidências digitais
+- Logs e registros computacionais
+- Biometria, selfie e prova de vida
+- Blockchain e transações digitais
+- Cibersegurança e incidentes digitais
+- Documentos e arquivos eletrônicos
+- Sistemas e softwares
+- Hashes e metadados
+- Bancos de dados
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Formação
+
+- Bacharel em Direito
+- Tecnólogo em Análise e Desenvolvimento de Sistemas
+- Pós-graduação em Arquitetura e Gestão de Infraestrutura em TI
+- Pós-graduação em Desenvolvimento Web Full Stack
+- Pós-graduação em Perícia Judicial com ênfase em Crimes Cibernéticos
+
+## Certificações
+
+- Cisco Cybersecurity
+- Cisco Artificial Intelligence
+- CCNA: Introduction to Networks
+
+## Tecnologias utilizadas no site
+
+- React
+- Vite
+- JavaScript
+- CSS
+- Vercel
+
+## Contato
+
+🌐 Site: https://www.danielrosaperito.com.br  
+🔗 LinkedIn: https://www.linkedin.com/in/daniel-rosa-ti/

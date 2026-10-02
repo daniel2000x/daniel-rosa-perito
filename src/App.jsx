@@ -86,21 +86,21 @@ const totalNomeacoes =
     <div className="hero-text">
 
       <span className="hero-label">
-        PERÍCIA JUDICIAL • DIREITO • TECNOLOGIA • CIBERSEGURANÇA
-      </span>
+  PERÍCIA JUDICIAL • ASSISTÊNCIA TÉCNICA • DIREITO • TECNOLOGIA
+</span>
 
-      <h1>
-        Perícia digital com
-        <span> precisão, método e visão multidisciplinar.</span>
-      </h1>
+<h1>
+  Perícia e assistência técnica digital com
+  <span> precisão, método e visão multidisciplinar.</span>
+</h1>
 
-      <p>
-        Atuação em perícia digital com integração entre Direito e
-        Tecnologia da Informação, análise de assinaturas eletrônicas,
-        evidências digitais, blockchain, prova de vida, registros
-        computacionais e incidentes cibernéticos, com atendimento
-        em âmbito nacional.
-      </p>
+<p>
+  Atuação como Perito Judicial e Assistente Técnico em Tecnologia
+  da Informação, integrando conhecimentos de Direito e Tecnologia
+  na análise de assinaturas eletrônicas, evidências digitais,
+  blockchain, biometria, prova de vida, registros computacionais
+  e incidentes cibernéticos.
+</p>
 
       <div className="hero-buttons">
 
@@ -275,12 +275,32 @@ const totalNomeacoes =
   </h2>
 
   <p>
-    Atuação técnica em demandas judiciais que envolvem
-    sistemas, documentos eletrônicos, assinaturas digitais,
-    dados, registros computacionais e demais elementos
-    relacionados à Tecnologia da Informação.
-  </p>
+  Daniel Rosa atua como Perito Judicial e Assistente Técnico na
+  área de Tecnologia da Informação, auxiliando o Poder Judiciário
+  e as partes em demandas que envolvem prova digital, sistemas,
+  documentos eletrônicos, registros computacionais e
+  cibersegurança.
+</p>
 </div>
+
+<div className="technical-assistance-highlight">
+
+  <span>
+    ASSISTÊNCIA TÉCNICA PERICIAL
+  </span>
+
+  <h3>
+    Suporte técnico especializado para partes e advogados.
+  </h3>
+
+  <p>
+    Atuação como Assistente Técnico para advogados, escritórios,
+    empresas e partes em processos que envolvam Tecnologia da
+    Informação, evidências digitais e prova eletrônica.
+  </p>
+
+</div>
+
 
     <div className="services-grid">
 
@@ -478,6 +498,22 @@ const totalNomeacoes =
     cibernéticos, eventos de segurança, acessos, logs,
     endereços IP e outros vestígios digitais relevantes
     ao objeto da perícia.
+  </p>
+</article>
+
+<article className="service-card">
+  <span className="service-number">14</span>
+
+  <h3>
+    Assistência Técnica Pericial
+  </h3>
+
+  <p>
+    Atuação como Assistente Técnico em processos judiciais,
+    incluindo análise dos documentos e evidências digitais,
+    elaboração de quesitos, acompanhamento da prova pericial,
+    análise de laudos, elaboração de parecer técnico e suporte
+    técnico na formulação de manifestações e esclarecimentos.
   </p>
 </article>
 

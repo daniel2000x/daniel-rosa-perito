@@ -5,6 +5,7 @@ import './App.css'
 import fotoDaniel from './assets/daniel-rosa.png'
 import BrazilMap from './components/BrazilMap'
 import PericiaExplorer from './components/PericiaExplorer'
+import ComoFuncionaPericia from './components/ComoFuncionaPericia'
 
 import {
   estadosSemCadastro,
@@ -262,6 +263,8 @@ const totalNomeacoes =
           </div>
 
         </section>
+
+        <ComoFuncionaPericia />
 
         {/* ATUAÇÃO PERICIAL */}
 <section className="services" id="atuacao">

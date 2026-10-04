@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 
 import './App.css'
 import fotoDaniel from './assets/daniel-rosa.png'
@@ -882,6 +883,7 @@ const totalNomeacoes =
 
 </footer>
 
+      <Analytics />
     </div>
   )
 }

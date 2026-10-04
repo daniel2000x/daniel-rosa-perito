@@ -4,7 +4,7 @@ import { Analytics } from '@vercel/analytics/react'
 import './App.css'
 import fotoDaniel from './assets/daniel-rosa.png'
 import BrazilMap from './components/BrazilMap'
-
+import PericiaExplorer from './components/PericiaExplorer'
 
 import {
   estadosSemCadastro,
@@ -169,6 +169,8 @@ const totalNomeacoes =
   </div>
 
 </section>
+
+        <PericiaExplorer />
 
         {/* SOBRE */}
         <section className="about" id="sobre">

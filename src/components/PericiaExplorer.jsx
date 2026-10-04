@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+import './PericiaExplorer.css'
 const tiposPericia = [
   {
     id: 'computador',

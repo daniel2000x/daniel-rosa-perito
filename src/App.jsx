@@ -56,13 +56,31 @@ const totalNomeacoes =
             </div>
           </a>
 
-          <nav className="menu">
-            <a href="#inicio">Início</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#atuacao">Atuação</a>
-            <a href="#cobertura">Atuação Nacional</a>
-            <a href="#contato">Contato</a>
-          </nav>
+         <nav className="menu">
+  <a href="#inicio">Início</a>
+
+  <a href="#explorar-pericia">
+    Explorar Perícia
+  </a>
+
+  <a href="#como-funciona">
+    Como Funciona
+  </a>
+
+  <a href="#sobre">Sobre</a>
+
+  <a href="#atuacao">
+    Atuação
+  </a>
+
+  <a href="#cobertura">
+    Atuação Nacional
+  </a>
+
+  <a href="#contato">
+    Contato
+  </a>
+</nav>
 
           <a
   href="https://wa.me/5579998657281?text=Olá%20Daniel,%20entrei%20em%20contato%20através%20do%20seu%20site."

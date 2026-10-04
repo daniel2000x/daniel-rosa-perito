@@ -116,14 +116,16 @@
   display: flex;
   align-items: center;
 
-  gap: 28px;
+  gap: 18px;
 }
 
 .menu a {
   color: #3f4b5f;
 
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
+
+  white-space: nowrap;
 
   transition: color 0.2s ease;
 }

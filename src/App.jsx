@@ -106,20 +106,19 @@ const totalNomeacoes =
     <div className="hero-text">
 
       <span className="hero-label">
-  PERÍCIA JUDICIAL • ASSISTÊNCIA TÉCNICA • DIREITO • TECNOLOGIA
+   PERITO JUDICIAL EM TI • PERÍCIA DIGITAL • ASSISTÊNCIA TÉCNICA
 </span>
 
 <h1>
-  Perícia e assistência técnica digital com
-  <span> precisão, método e visão multidisciplinar.</span>
+  Perito Judicial em
+  <span> Tecnologia da Informação.</span>
 </h1>
 
 <p>
-  Atuação como Perito Judicial e Assistente Técnico em Tecnologia
-  da Informação, integrando conhecimentos de Direito e Tecnologia
-  na análise de assinaturas eletrônicas, evidências digitais,
-  blockchain, biometria, prova de vida, registros computacionais
-  e incidentes cibernéticos.
+  Perícia digital e assistência técnica em Tecnologia da Informação,
+  com atuação na análise de evidências digitais, assinaturas eletrônicas
+  e digitais, sistemas, logs, blockchain, biometria, documentos
+  eletrônicos e incidentes cibernéticos.
 </p>
 
       <div className="hero-buttons">

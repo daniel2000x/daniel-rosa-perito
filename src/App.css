@@ -1888,3 +1888,195 @@ a.contact-detail:hover {
 }
 
 }
+
+/* =========================
+   DASHBOARD ATUAÇÃO NACIONAL
+========================= */
+
+.coverage-dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+
+  margin: 38px 0 30px;
+}
+
+.coverage-stat-card {
+  padding: 24px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 12px 35px rgba(15, 23, 42, 0.05);
+}
+
+.coverage-stat-card > span {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #64748b;
+
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.coverage-stat-card strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #0f2745;
+
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.coverage-stat-card p {
+  margin: 0;
+
+  color: #94a3b8;
+
+  font-size: 0.78rem;
+}
+
+/* RANKING */
+
+.coverage-ranking {
+  margin-top: 30px;
+  padding: 30px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 15px 40px rgba(15, 23, 42, 0.05);
+}
+
+.coverage-ranking-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  gap: 30px;
+
+  margin-bottom: 28px;
+}
+
+.coverage-ranking-heading h3 {
+  margin: 7px 0 0;
+
+  color: #0f2745;
+
+  font-size: 1.35rem;
+}
+
+.coverage-ranking-heading p {
+  max-width: 430px;
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 0.84rem;
+  line-height: 1.6;
+}
+
+.coverage-ranking-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.coverage-ranking-item {
+  display: grid;
+  grid-template-columns: 42px 1fr 35px;
+  align-items: center;
+
+  gap: 15px;
+}
+
+.coverage-ranking-item strong {
+  color: #0f2745;
+
+  font-size: 0.78rem;
+}
+
+.coverage-ranking-item > span {
+  color: #2563eb;
+
+  font-size: 0.78rem;
+  font-weight: 800;
+
+  text-align: right;
+}
+
+.coverage-ranking-track {
+  height: 9px;
+
+  overflow: hidden;
+
+  border-radius: 999px;
+
+  background: #eef2f7;
+}
+
+.coverage-ranking-bar {
+  height: 100%;
+
+  border-radius: inherit;
+
+  background:
+    linear-gradient(
+      90deg,
+      #2563eb,
+      #60a5fa
+    );
+
+  transition: width 0.5s ease;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+
+  .coverage-dashboard-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .coverage-dashboard-stats {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+  }
+
+  .coverage-stat-card {
+    padding: 18px;
+  }
+
+  .coverage-stat-card strong {
+    font-size: 1.65rem;
+  }
+
+  .coverage-ranking {
+    padding: 22px 18px;
+  }
+
+  .coverage-ranking-heading {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+}

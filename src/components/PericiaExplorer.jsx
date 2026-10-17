@@ -111,8 +111,13 @@ function PericiaExplorer() {
   const [selecionado, setSelecionado] = useState(tiposPericia[0])
 
   const mensagem = encodeURIComponent(
-    `Olá Daniel, visitei seu site e gostaria de conversar sobre: ${selecionado.titulo}.`
-  )
+     `Olá Daniel! Acessei seu site e utilizei o Explorador de Perícia Digital.
+
+A situação que mais se aproxima do meu caso é:
+${selecionado.titulo}
+
+Gostaria de conversar para entender se uma análise pericial pode ser aplicada ao meu caso.`
+)
 
   const whatsappUrl = `https://wa.me/5579998657281?text=${mensagem}`
 
@@ -178,14 +183,23 @@ function PericiaExplorer() {
               </ul>
             </div>
 
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="pericia-contact-button"
-            >
-              Falar sobre este caso
-            </a>
+           <div className="pericia-conversion">
+  <span>ESTE CENÁRIO SE APROXIMA DO SEU CASO?</span>
+
+  <p>
+    Entre em contato para apresentar brevemente a situação
+    e os elementos digitais envolvidos.
+  </p>
+
+  <a
+    href={whatsappUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="pericia-contact-button"
+  >
+    Falar sobre este caso no WhatsApp
+  </a>
+</div>
 
             <p className="pericia-disclaimer">
               As informações apresentadas são gerais e não substituem

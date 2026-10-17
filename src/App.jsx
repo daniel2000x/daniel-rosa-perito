@@ -6,6 +6,7 @@ import fotoDaniel from './assets/daniel-rosa.png'
 import BrazilMap from './components/BrazilMap'
 import PericiaExplorer from './components/PericiaExplorer'
 import ComoFuncionaPericia from './components/ComoFuncionaPericia'
+import DashboardPericia from './components/DashboardPericia'
 
 import {
   estadosSemCadastro,
@@ -39,6 +40,46 @@ const totalNomeacoes =
       total + cidade.quantidade,
     0
   )
+
+  const resumoNacional = Object.entries(periciasAtivas)
+  .map(([sigla, dados]) => {
+    const cidades = dados?.cidades || []
+
+    const total = cidades.reduce(
+      (soma, cidade) => soma + cidade.quantidade,
+      0
+    )
+
+    return {
+      sigla,
+      cidades,
+      total,
+    }
+  })
+  .filter((estado) => estado.total > 0)
+  .sort((a, b) => b.total - a.total)
+
+const totalNomeacoesNacional = resumoNacional.reduce(
+  (soma, estado) => soma + estado.total,
+  0
+)
+
+const totalEstadosComPericias = resumoNacional.length
+
+const totalCidadesNacional = resumoNacional.reduce(
+  (soma, estado) => soma + estado.cidades.length,
+  0
+)
+
+const totalEstadosCadastrados =
+  27 - estadosSemCadastro.length
+
+const maiorNumeroNomeacoes =
+  resumoNacional.length > 0
+    ? Math.max(
+        ...resumoNacional.map((estado) => estado.total)
+      )
+    : 1
   
   return (
     <div className="site">
@@ -60,13 +101,16 @@ const totalNomeacoes =
   <a href="#inicio">Início</a>
 
   <a href="#explorar-pericia">
-    Explorar Perícia
-  </a>
+  Explorar Perícia
+</a>
 
-  <a href="#como-funciona">
-    Como Funciona
-  </a>
+<a href="#painel-pericial">
+  Painel Pericial
+</a>
 
+<a href="#como-funciona">
+  Como Funciona
+</a>
   <a href="#sobre">Sobre</a>
 
   <a href="#atuacao">
@@ -188,7 +232,9 @@ const totalNomeacoes =
 
 </section>
 
-        <PericiaExplorer />
+<DashboardPericia />
+
+<PericiaExplorer />
 
         {/* SOBRE */}
         <section className="about" id="sobre">
@@ -565,6 +611,50 @@ const totalNomeacoes =
               </p>
             </div>
 
+            <div className="coverage-dashboard-stats">
+
+  <div className="coverage-stat-card">
+    <span>NOMEAÇÕES</span>
+
+    <strong>
+      {totalNomeacoesNacional}
+    </strong>
+
+    <p>em andamento</p>
+  </div>
+
+  <div className="coverage-stat-card">
+    <span>ESTADOS</span>
+
+    <strong>
+      {totalEstadosComPericias}
+    </strong>
+
+    <p>com perícias ativas</p>
+  </div>
+
+  <div className="coverage-stat-card">
+    <span>LOCALIDADES</span>
+
+    <strong>
+      {totalCidadesNacional}
+    </strong>
+
+    <p>com atuação atual</p>
+  </div>
+
+  <div className="coverage-stat-card">
+    <span>CADASTROS</span>
+
+    <strong>
+      {totalEstadosCadastrados}
+    </strong>
+
+    <p>estados habilitados</p>
+  </div>
+
+</div>
+
             <div className="coverage-content">
 
               <div className="map-card">
@@ -572,6 +662,65 @@ const totalNomeacoes =
   onEstadoChange={setEstadoSelecionado}
   estadoSelecionado={estadoSelecionado}
 />
+
+<div className="coverage-ranking">
+
+  <div className="coverage-ranking-heading">
+
+    <div>
+      <span className="section-label">
+        DISTRIBUIÇÃO ATUAL
+      </span>
+
+      <h3>
+        Nomeações por estado
+      </h3>
+    </div>
+
+    <p>
+      Distribuição das perícias atualmente cadastradas
+      no painel de atuação.
+    </p>
+
+  </div>
+
+  <div className="coverage-ranking-list">
+
+    {resumoNacional.map((estado) => {
+
+      const percentual =
+        (estado.total / maiorNumeroNomeacoes) * 100
+
+      return (
+        <div
+          className="coverage-ranking-item"
+          key={estado.sigla}
+        >
+
+          <strong>
+            {estado.sigla}
+          </strong>
+
+          <div className="coverage-ranking-track">
+            <div
+              className="coverage-ranking-bar"
+              style={{
+                width: `${percentual}%`,
+              }}
+            />
+          </div>
+
+          <span>
+            {estado.total}
+          </span>
+
+        </div>
+      )
+    })}
+
+  </div>
+
+</div>
 </div>
 
               <div className="map-info">

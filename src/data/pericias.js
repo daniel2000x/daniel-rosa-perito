@@ -1,5 +1,5 @@
 export const estadosSemCadastro = [
-  'MG',
+  'PA',
   'ES',
 ]
 
@@ -18,7 +18,7 @@ export const periciasAtivas = {
 
       {
         nome: 'Itabaianinha',
-        quantidade: 28,
+        quantidade: 30,
         varas: [
           'Vara Única de Itabaianinha',
         ],

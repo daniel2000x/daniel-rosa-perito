@@ -7,6 +7,7 @@ import BrazilMap from './components/BrazilMap'
 import PericiaExplorer from './components/PericiaExplorer'
 import ComoFuncionaPericia from './components/ComoFuncionaPericia'
 import DashboardPericia from './components/DashboardPericia'
+import AssistenteForense from './components/AssistenteForense'
 
 import {
   estadosSemCadastro,
@@ -1054,6 +1055,7 @@ const maiorNumeroNomeacoes =
 
 </footer>
 
+         <AssistenteForense />
       <Analytics />
     </div>
   )

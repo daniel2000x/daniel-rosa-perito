@@ -10,7 +10,7 @@ export const periciasAtivas = {
     cidades: [
       {
         nome: "Itaporanga D'Ajuda",
-        quantidade: 22,
+        quantidade: 24,
         varas: [
           "1ª Vara Cível e Criminal de Itaporanga D'Ajuda",
         ],
@@ -18,7 +18,7 @@ export const periciasAtivas = {
 
       {
         nome: 'Itabaianinha',
-        quantidade: 30,
+        quantidade: 31,
         varas: [
           'Vara Única de Itabaianinha',
         ],

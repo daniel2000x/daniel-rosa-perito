@@ -5,6 +5,7 @@ import './App.css'
 import fotoDaniel from './assets/daniel-rosa.png'
 import BrazilMap from './components/BrazilMap'
 import TrabalhoSection from './components/TrabalhoSection'
+import SiteMotion, { AnimatedCounter } from './components/SiteMotion'
 import PericiaExplorer from './components/PericiaExplorer'
 import ServicosCarouselControls from './components/ServicosCarouselControls'
 import ComoFuncionaPericia from './components/ComoFuncionaPericia'
@@ -85,7 +86,8 @@ const maiorNumeroNomeacoes =
   
   return (
     <div className="site">
-
+        <SiteMotion />
+      
       {/* CABEÇALHO */}
       <header className="header">
         <div className="container header-content">
@@ -618,7 +620,7 @@ const maiorNumeroNomeacoes =
     <span>NOMEAÇÕES</span>
 
     <strong>
-      {totalNomeacoesNacional}
+     <AnimatedCounter value={totalNomeacoesNacional} />
     </strong>
 
     <p>em andamento</p>
@@ -628,7 +630,7 @@ const maiorNumeroNomeacoes =
     <span>ESTADOS</span>
 
     <strong>
-      {totalEstadosComPericias}
+    <AnimatedCounter value={totalEstadosComPericias} />
     </strong>
 
     <p>com perícias ativas</p>
@@ -638,7 +640,7 @@ const maiorNumeroNomeacoes =
     <span>LOCALIDADES</span>
 
     <strong>
-      {totalCidadesNacional}
+     <AnimatedCounter value={totalCidadesNacional} />
     </strong>
 
     <p>com atuação atual</p>
@@ -648,7 +650,7 @@ const maiorNumeroNomeacoes =
     <span>CADASTROS</span>
 
     <strong>
-      {totalEstadosCadastrados}
+     <AnimatedCounter value={totalEstadosCadastrados} />
     </strong>
 
     <p>estados habilitados</p>

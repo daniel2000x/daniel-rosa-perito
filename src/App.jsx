@@ -4,6 +4,7 @@ import { Analytics } from '@vercel/analytics/react'
 import './App.css'
 import fotoDaniel from './assets/daniel-rosa.png'
 import BrazilMap from './components/BrazilMap'
+import TrabalhoSection from './components/TrabalhoSection'
 import PericiaExplorer from './components/PericiaExplorer'
 import ComoFuncionaPericia from './components/ComoFuncionaPericia'
 import AssistenteForense from './components/AssistenteForense'
@@ -915,6 +916,9 @@ const maiorNumeroNomeacoes =
           </div>
         </section>
 
+          <TrabalhoSection />
+
+        
        {/* CONTATO */}
 <section className="contact" id="contato">
 

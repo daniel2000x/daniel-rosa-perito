@@ -36,7 +36,7 @@ function TrabalhoSection() {
       '.processo-heading', '.timeline-wrapper', '.timeline-result',
       '.services-heading', '.technical-assistance-highlight', '.service-card',
       '.coverage-heading', '.coverage-dashboard-stats', '.map-card', '.map-info',
-      '.labor-heading-copy', '.labor-headline-stat', '.labor-map-card',
+      '.labor-heading-copy', '.labor-map-card',
       '.labor-detail-card', '.labor-directory',
       '.contact-text', '.contact-card',
     ].join(', '))
@@ -123,17 +123,12 @@ function TrabalhoSection() {
         <div className="labor-heading">
           <div className="labor-heading-copy">
             <span className="labor-eyebrow">JUSTIÇA DO TRABALHO · ATUAÇÃO NACIONAL</span>
-            <h2 id="labor-titulo">24 regiões. <span>Uma atuação preparada para todo o Brasil.</span></h2>
+            <h2 id="labor-titulo">Cadastrado em todos os <span>TRTs do Brasil.</span></h2>
             <p>
-              Cadastro profissional informado nos 24 Tribunais Regionais do Trabalho,
-              da 1ª à 24ª Região, com disponibilidade para futuras nomeações em
-              perícias de Tecnologia da Informação.
+              Cadastro profissional nos Tribunais Regionais do Trabalho de todo o país,
+              com disponibilidade para futuras nomeações em perícias judiciais
+              de Tecnologia da Informação.
             </p>
-          </div>
-          <div className="labor-headline-stat" aria-label="Cadastrado nos 24 TRTs">
-            <strong>24<span>/24</span></strong>
-            <span>TRTs com cadastro profissional</span>
-            <small>Disponível para nomeações</small>
           </div>
         </div>
 
@@ -142,7 +137,7 @@ function TrabalhoSection() {
             <div className="labor-card-heading">
               <span>EXPLORADOR DE REGIÕES</span>
               <h3>Mapa da Justiça do Trabalho</h3>
-              <p>Selecione um estado ou escolha uma das 24 regiões na lista abaixo.</p>
+              <p>Selecione um estado no mapa ou um tribunal na lista abaixo.</p>
             </div>
 
             {mapaIndisponivel ? (
@@ -241,9 +236,9 @@ function TrabalhoSection() {
           <div className="labor-directory-heading">
             <div>
               <span className="labor-eyebrow">CONSULTA POR TRIBUNAL</span>
-              <h3>As 24 regiões e seus estados</h3>
+              <h3>Tribunais Regionais do Trabalho por estado</h3>
             </div>
-            <p>Toque em uma região para destacar seu território e conferir os dados do cadastro.</p>
+            <p>Selecione um tribunal para conferir seus estados e a disponibilidade para nomeações.</p>
           </div>
           <div className="labor-directory-grid" role="group" aria-label="Selecionar Tribunal Regional do Trabalho">
             {trts.map((trt) => (

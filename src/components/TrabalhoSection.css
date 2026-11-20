@@ -1,0 +1,235 @@
+/* O antigo cartão isolado de TRT no painel dos TJs é ocultado.
+   A instalação automatizada também o remove do App.jsx. */
+.coverage > .container > .coverage-stat-card { display: none; }
+
+/* Seção independente para a Justiça do Trabalho */
+.labor-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 112px 0 120px;
+  color: #f8fbff;
+  background: linear-gradient(150deg, #061a33 0%, #0b2b52 56%, #06172d 100%);
+}
+.labor-section::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: -20% -20% auto auto;
+  width: 760px;
+  height: 760px;
+  background: radial-gradient(circle, rgba(61, 132, 234, .2), transparent 66%);
+  pointer-events: none;
+}
+.labor-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 244px;
+  gap: 45px;
+  align-items: center;
+  margin-bottom: 38px;
+}
+.labor-eyebrow, .labor-detail-label, .labor-card-heading > span {
+  display: block;
+  color: #83c0ff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .14em;
+}
+.labor-heading h2 {
+  max-width: 770px;
+  margin-top: 16px;
+  font-size: clamp(34px, 4.4vw, 57px);
+  line-height: 1.11;
+  letter-spacing: -.04em;
+}
+.labor-heading h2 span { color: #8ec6ff; }
+.labor-heading-copy > p {
+  max-width: 720px;
+  margin-top: 20px;
+  color: #c3d2e6;
+  font-size: 16px;
+  line-height: 1.75;
+}
+.labor-headline-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+  padding: 26px;
+  border: 1px solid rgba(174, 211, 255, .25);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, .065);
+  box-shadow: inset 0 1px rgba(255, 255, 255, .09);
+}
+.labor-headline-stat strong {
+  color: #fff;
+  font-size: 64px;
+  line-height: 1;
+  letter-spacing: -.075em;
+}
+.labor-headline-stat strong span { color: #70b6ff; font-size: 29px; }
+.labor-headline-stat > span { font-weight: 700; font-size: 13px; line-height: 1.45; }
+.labor-headline-stat small { color: #90e9c3; font-size: 12px; }
+.labor-workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(300px, .82fr);
+  gap: 22px;
+  align-items: stretch;
+}
+.labor-map-card {
+  min-width: 0;
+  padding: 30px 32px 24px;
+  background: #fff;
+  border-radius: 24px;
+  color: #102e51;
+  border: 1px solid #dce7f5;
+  box-shadow: 0 24px 55px rgba(1, 9, 25, .18);
+}
+.labor-card-heading > span { color: #3775b7; }
+.labor-card-heading h3 { margin-top: 9px; font-size: clamp(22px, 2.5vw, 29px); letter-spacing: -.025em; }
+.labor-card-heading p { margin-top: 9px; color: #526a84; font-size: 13px; line-height: 1.6; }
+.labor-map { max-width: 650px; margin: 5px auto 0; }
+.labor-map svg { display: block; width: 100%; height: auto; }
+.labor-state {
+  fill: #d9e4f1;
+  stroke: #fff;
+  stroke-width: 1.1;
+  outline: none;
+  vector-effect: non-scaling-stroke;
+  cursor: pointer;
+  transition: fill .22s ease, filter .22s ease;
+}
+.labor-state.is-selected { fill: #176bdb; filter: drop-shadow(0 3px 4px rgba(15, 68, 135, .2)); }
+.labor-state:hover, .labor-state.is-hovered { fill: #4795f0; }
+.labor-state:focus-visible { stroke: #001e43; stroke-width: 3; }
+.labor-map-loading {
+  display: grid;
+  place-items: center;
+  min-height: 350px;
+  padding: 20px;
+  color: #526a84;
+  text-align: center;
+  font-size: 14px;
+}
+.labor-map-footer {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  min-height: 40px;
+  padding: 10px 14px;
+  border-radius: 11px;
+  background: #f0f5fc;
+  color: #255583;
+  font-size: 12px;
+  font-weight: 700;
+}
+.labor-legend-dot { width: 9px; height: 9px; flex-shrink: 0; border-radius: 50%; background: #176bdb; }
+.labor-map-note { margin-top: 14px; color: #64758b; font-size: 11px; line-height: 1.55; }
+.labor-detail-card {
+  min-width: 0;
+  padding: 34px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(183, 216, 252, .24);
+  border-radius: 24px;
+  background: linear-gradient(160deg, rgba(45, 95, 153, .45), rgba(6, 25, 53, .5));
+  box-shadow: 0 20px 44px rgba(0, 0, 0, .12);
+}
+.labor-detail-top { display: flex; justify-content: space-between; gap: 10px; align-items: center; flex-wrap: wrap; }
+.labor-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border-radius: 999px;
+  padding: 7px 11px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .05em;
+  color: #bbf7d4;
+  background: rgba(36, 149, 108, .16);
+  border: 1px solid rgba(135, 227, 176, .22);
+}
+.labor-status-pill i { width: 7px; height: 7px; border-radius: 50%; background: #62dea6; }
+.labor-detail-number { margin-top: 28px; color: #fff; font-size: clamp(48px, 5.7vw, 74px); font-weight: 800; line-height: 1; letter-spacing: -.07em; }
+.labor-detail-card h3 { margin-top: 14px; color: #e8f3ff; font-size: 20px; line-height: 1.42; font-weight: 600; }
+.labor-detail-meta { display: grid; gap: 13px; margin-top: 24px; }
+.labor-detail-meta > div { display: flex; justify-content: space-between; gap: 15px; padding-bottom: 12px; border-bottom: 1px solid rgba(205, 229, 255, .15); }
+.labor-detail-meta dt { color: #a4bfde; font-size: 12px; }
+.labor-detail-meta dd { color: #f7fbff; font-size: 12px; text-align: right; font-weight: 700; }
+.labor-appointment { margin-top: 23px; border: 1px solid rgba(132, 189, 248, .24); border-radius: 15px; padding: 18px; background: rgba(3, 20, 41, .32); }
+.labor-appointment-heading { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.labor-appointment-heading span { color: #a8c8e9; font-size: 10px; letter-spacing: .1em; font-weight: 800; }
+.labor-appointment-heading strong { color: #fff; font-size: 30px; line-height: 1; }
+.labor-appointment > p { margin-top: 10px; color: #b9cce3; font-size: 12px; line-height: 1.7; }
+.labor-case-list { padding: 0; margin: 13px 0 0; list-style: none; display: grid; gap: 9px; }
+.labor-case-list li { display: flex; flex-direction: column; gap: 4px; padding: 10px; border-radius: 9px; background: rgba(255, 255, 255, .07); }
+.labor-case-list li strong { font-size: 13px; }
+.labor-case-list li span { color: #b9cce3; font-size: 11px; }
+.labor-national-count { display: flex; gap: 15px; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 25px; }
+.labor-national-count span { color: #a8c8e9; font-size: 12px; line-height: 1.5; }
+.labor-national-count strong { color: #8ec6ff; font-size: 32px; }
+.labor-directory { margin-top: 25px; padding: 30px; border: 1px solid rgba(174, 211, 255, .23); border-radius: 24px; background: rgba(255, 255, 255, .055); }
+.labor-directory-heading { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 23px; }
+.labor-directory-heading h3 { margin-top: 9px; font-size: 23px; }
+.labor-directory-heading > p { color: #b3c8e2; max-width: 365px; font-size: 12px; line-height: 1.7; }
+.labor-directory-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; }
+.labor-region-button {
+  min-height: 70px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 7px;
+  border: 1px solid rgba(179, 213, 252, .2);
+  border-radius: 13px;
+  padding: 13px 15px;
+  background: rgba(7, 30, 58, .55);
+  color: #e5f1ff;
+  cursor: pointer;
+  text-align: left;
+  transition: background .2s ease, border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+.labor-region-button > span { font-size: 13px; font-weight: 800; }
+.labor-region-button > strong { color: #a9c2dc; font-size: 11px; font-weight: 600; }
+.labor-region-button:hover { transform: translateY(-3px); background: rgba(38, 87, 143, .65); border-color: rgba(149, 207, 255, .6); }
+.labor-region-button.active { background: #1c70d7; border-color: #70b7ff; box-shadow: 0 10px 24px rgba(0, 10, 28, .24); }
+.labor-region-button.active > strong { color: #e8f6ff; }
+.labor-region-button:focus-visible { outline: 3px solid #92cbff; outline-offset: 3px; }
+.labor-directory-footnote { margin-top: 20px; color: #a3bdd9; font-size: 12px; line-height: 1.6; }
+
+/* Transições de entrada ao rolar a página: ativadas somente por JavaScript. */
+.scroll-reveal { opacity: 0; transform: translate3d(0, 27px, 0); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); transition-delay: var(--reveal-delay, 0ms); }
+.scroll-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+@media (hover: hover) {
+  .service-card.scroll-reveal.is-visible:hover,
+  .about-card.scroll-reveal.is-visible:hover { transform: translateY(-7px); }
+}
+@media (max-width: 1050px) {
+  .labor-directory-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .labor-workspace { grid-template-columns: minmax(0, 1fr) minmax(280px, .8fr); }
+  .labor-detail-card { padding: 24px; }
+}
+@media (max-width: 800px) {
+  .labor-section { padding: 75px 0 85px; }
+  .labor-heading { grid-template-columns: 1fr; gap: 24px; }
+  .labor-headline-stat { max-width: 350px; }
+  .labor-workspace { grid-template-columns: 1fr; }
+  .labor-detail-card { min-height: 480px; }
+  .labor-directory-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .labor-heading h2 { font-size: 35px; }
+  .labor-heading-copy > p { font-size: 14px; }
+  .labor-map-card { padding: 22px 17px; border-radius: 17px; }
+  .labor-detail-card { padding: 24px 20px; border-radius: 17px; }
+  .labor-directory { padding: 22px 15px; border-radius: 17px; }
+  .labor-directory-heading { align-items: start; flex-direction: column; gap: 11px; }
+  .labor-directory-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; }
+  .labor-region-button { min-height: 68px; padding: 11px; }
+  .labor-map-loading { min-height: 270px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .labor-state, .labor-region-button { transition: none !important; }
+}

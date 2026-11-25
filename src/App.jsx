@@ -10,6 +10,7 @@ import PericiaExplorer from './components/PericiaExplorer'
 import ServicosCarouselControls from './components/ServicosCarouselControls'
 import ComoFuncionaPericia from './components/ComoFuncionaPericia'
 import AssistenteForense from './components/AssistenteForense'
+import RadarNews, { RadarLink } from './components/RadarNews'
 
 import {
   estadosSemCadastro,
@@ -123,9 +124,20 @@ const maiorNumeroNomeacoes =
     Atuação Nacional
   </a>
 
-  <a href="#contato">
-    Contato
+ <div className="dr-header-actions">
+
+  <RadarLink />
+
+  <a
+    href="https://wa.me/5579998657281?text=Olá%20Daniel,%20entrei%20em%20contato%20através%20do%20seu%20site."
+    target="_blank"
+    rel="noopener noreferrer"
+    className="button-secondary"
+  >
+    Entrar em contato
   </a>
+
+</div>
 </nav>
 
           <a
@@ -921,6 +933,8 @@ const maiorNumeroNomeacoes =
         </section>
 
           <TrabalhoSection />
+
+        <RadarNews />
 
         
        {/* CONTATO */}

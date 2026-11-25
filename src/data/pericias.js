@@ -58,7 +58,7 @@ export const periciasAtivas = {
 
       {
         nome: 'Aracaju',
-        quantidade: 3,
+        quantidade: 4,
         varas: [
           '8ª Vara Cível de Aracaju',
           '1ª Vara Cível de Aracaju',

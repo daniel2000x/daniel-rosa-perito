@@ -269,9 +269,10 @@ export default function RadarNews() {
         ).matches
       ) return
 
-      if (area.matches(':hover')) return
-
-      if (area.contains(document.activeElement)) return
+     if (
+  area.contains(document.activeElement) &&
+  document.activeElement?.matches(':focus-visible')
+) return
 
       const posicao = elemento.getBoundingClientRect()
 
@@ -282,7 +283,7 @@ export default function RadarNews() {
 
       moverCarrossel(elemento, 1)
 
-    }, 4000)
+    }, 3000)
 
     return () => window.clearInterval(intervalo)
 

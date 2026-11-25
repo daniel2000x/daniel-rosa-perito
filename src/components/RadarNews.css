@@ -480,3 +480,32 @@
   }
 
 }
+/* CARROSSEL AUTOMATICO DE NOTICIAS */
+
+.dr-news-track {
+  grid-auto-columns: calc((100% - 32px) / 3);
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.dr-news-track::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .dr-news-track {
+    grid-auto-columns: calc((100% - 16px) / 2);
+  }
+}
+
+@media (max-width: 650px) {
+  .dr-news-track {
+    grid-auto-columns: 88%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dr-news-track {
+    scroll-behavior: auto;
+  }
+}

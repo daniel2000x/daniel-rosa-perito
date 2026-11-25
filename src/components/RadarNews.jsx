@@ -48,9 +48,7 @@ export function RadarIcon() {
       </g>
 
       <circle cx="29" cy="25" r="2" fill="#34d399" />
-
-      <circle cx="20" cy="20" r="2"
-        fill="currentColor" />
+      <circle cx="20" cy="20" r="2" fill="currentColor" />
     </svg>
   )
 }
@@ -84,12 +82,67 @@ export function RadarLink() {
   )
 }
 
+function moverCarrossel(elemento, direcao) {
+
+  if (!elemento) return
+
+  const limite =
+    elemento.scrollWidth - elemento.clientWidth
+
+  if (limite <= 4) return
+
+  const reduzirMovimento = window.matchMedia(
+    '(prefers-reduced-motion: reduce)'
+  ).matches
+
+  const comportamento =
+    reduzirMovimento ? 'auto' : 'smooth'
+
+  if (
+    direcao > 0 &&
+    elemento.scrollLeft >= limite - 4
+  ) {
+    elemento.scrollTo({
+      left: 0,
+      behavior: comportamento,
+    })
+    return
+  }
+
+  if (
+    direcao < 0 &&
+    elemento.scrollLeft <= 4
+  ) {
+    elemento.scrollTo({
+      left: limite,
+      behavior: comportamento,
+    })
+    return
+  }
+
+  const card = elemento.querySelector('article')
+
+  const distancia = card
+    ? card.getBoundingClientRect().width + 16
+    : elemento.clientWidth
+
+  elemento.scrollBy({
+    left: direcao * distancia,
+    behavior: comportamento,
+  })
+
+}
+
 export default function RadarNews() {
 
   const [noticias, setNoticias] = useState([])
   const [falha, setFalha] = useState(false)
+  const [pausado, setPausado] = useState(false)
 
   const trilha = useRef(null)
+  const secao = useRef(null)
+
+  // ATUALIZACAO AUTOMATICA DAS NOTICIAS
 
   useEffect(() => {
 
@@ -100,7 +153,13 @@ export default function RadarNews() {
 
     const controller = new AbortController()
 
+    let carregando = false
+
     async function carregarNoticias() {
+
+      if (carregando || document.hidden) return
+
+      carregando = true
 
       try {
 
@@ -135,6 +194,7 @@ export default function RadarNews() {
         }
 
         if (!controller.signal.aborted) {
+
           setNoticias(
             dados.filter(n =>
               n &&
@@ -143,7 +203,9 @@ export default function RadarNews() {
               Number.isFinite(Date.parse(n.publicado_em))
             )
           )
+
           setFalha(false)
+
         }
 
       } catch {
@@ -152,39 +214,85 @@ export default function RadarNews() {
           setFalha(true)
         }
 
+      } finally {
+
+        carregando = false
+
       }
 
     }
 
     carregarNoticias()
 
-    return () => controller.abort()
+    const intervalo = window.setInterval(
+      carregarNoticias,
+      60000
+    )
+
+    document.addEventListener(
+      'visibilitychange',
+      carregarNoticias
+    )
+
+    return () => {
+
+      controller.abort()
+
+      window.clearInterval(intervalo)
+
+      document.removeEventListener(
+        'visibilitychange',
+        carregarNoticias
+      )
+
+    }
 
   }, [])
+
+
+  // MOVIMENTO AUTOMATICO DO CARROSSEL
+
+  useEffect(() => {
+
+    if (pausado) return
+
+    const intervalo = window.setInterval(() => {
+
+      const elemento = trilha.current
+      const area = secao.current
+
+      if (!elemento || !area || document.hidden) return
+
+      if (
+        window.matchMedia(
+          '(prefers-reduced-motion: reduce)'
+        ).matches
+      ) return
+
+      if (area.matches(':hover')) return
+
+      if (area.contains(document.activeElement)) return
+
+      const posicao = elemento.getBoundingClientRect()
+
+      if (
+        posicao.bottom <= 0 ||
+        posicao.top >= window.innerHeight
+      ) return
+
+      moverCarrossel(elemento, 1)
+
+    }, 4000)
+
+    return () => window.clearInterval(intervalo)
+
+  }, [pausado])
+
 
   const itens = [...noticias, noticiaInicial]
 
   function navegar(direcao) {
-
-    const elemento = trilha.current
-
-    if (!elemento) return
-
-    const card = elemento.querySelector('article')
-
-    const distancia = card
-      ? card.getBoundingClientRect().width + 16
-      : elemento.clientWidth
-
-    const reduzirMovimento = window.matchMedia(
-      '(prefers-reduced-motion: reduce)'
-    ).matches
-
-    elemento.scrollBy({
-      left: direcao * distancia,
-      behavior: reduzirMovimento ? 'auto' : 'smooth',
-    })
-
+    moverCarrossel(trilha.current, direcao)
   }
 
   return (
@@ -192,6 +300,7 @@ export default function RadarNews() {
     <section
       className="dr-news"
       id="noticias"
+      ref={secao}
       aria-labelledby="dr-news-title"
     >
 
@@ -232,6 +341,23 @@ export default function RadarNews() {
 
               <button
                 type="button"
+                onClick={() => setPausado(p => !p)}
+                aria-label={
+                  pausado
+                    ? 'Retomar animação'
+                    : 'Pausar animação'
+                }
+                title={
+                  pausado
+                    ? 'Retomar animação'
+                    : 'Pausar animação'
+                }
+              >
+                {pausado ? '▶' : 'Ⅱ'}
+              </button>
+
+              <button
+                type="button"
                 onClick={() => navegar(1)}
                 aria-label="Próximas notícias"
               >
@@ -254,6 +380,7 @@ export default function RadarNews() {
         <div
           className="dr-news-track"
           ref={trilha}
+          tabIndex={0}
           aria-label="Notícias profissionais"
         >
 

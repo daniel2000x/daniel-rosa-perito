@@ -63,6 +63,7 @@ export const periciasAtivas = {
           '8ª Vara Cível de Aracaju',
           '1ª Vara Cível de Aracaju',
           '4ª Vara Cível de Aracaju',
+          '15ª Vara Cível de Aracaju',
         ],
       },
 
@@ -116,7 +117,19 @@ export const periciasAtivas = {
     ],
   },
 
+RJ: {
+  estado: 'Rio de Janeiro',
 
+  cidades: [
+    {
+      nome: 'São João de Meriti',
+      quantidade: 1,
+      varas: [
+        '4ª Vara Cível da Comarca de São João de Meriti',
+      ],
+    },
+  ],
+},
   RO: {
     estado: 'Rondônia',
 

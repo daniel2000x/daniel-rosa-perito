@@ -124,7 +124,9 @@ const maiorNumeroNomeacoes =
     Atuação Nacional
   </a>
 
- <div className="dr-header-actions">
+</nav>
+
+<div className="dr-header-actions">
 
   <RadarLink />
 
@@ -138,16 +140,6 @@ const maiorNumeroNomeacoes =
   </a>
 
 </div>
-</nav>
-
-          <a
-  href="https://wa.me/5579998657281?text=Olá%20Daniel,%20entrei%20em%20contato%20através%20do%20seu%20site."
-  target="_blank"
-  rel="noopener noreferrer"
-  className="button-secondary"
->
-  Entrar em contato
-</a>
 
         </div>
       </header>

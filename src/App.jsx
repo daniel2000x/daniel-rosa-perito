@@ -4,7 +4,6 @@ import { Analytics } from '@vercel/analytics/react'
 import './App.css'
 import fotoDaniel from './assets/daniel-rosa.png'
 import BrazilMap from './components/BrazilMap'
-import TrabalhoSection from './components/TrabalhoSection'
 import SiteMotion, { AnimatedCounter } from './components/SiteMotion'
 import PericiaExplorer from './components/PericiaExplorer'
 import ServicosCarouselControls from './components/ServicosCarouselControls'
@@ -238,7 +237,7 @@ const maiorNumeroNomeacoes =
 
 </section>
 
-
+<RadarNews />
 
 <PericiaExplorer />
 
@@ -662,45 +661,7 @@ const maiorNumeroNomeacoes =
 
 </div>
         
-<div
-  className="coverage-stat-card"
-  style={{
-    marginBottom: '30px',
-    background: '#edf5ff',
-    borderColor: '#c7dcf6',
-  }}
->
-  <span>JUSTIÇA DO TRABALHO</span>
 
-  <strong style={{ fontSize: '2.5rem' }}>
-    24/24 TRTs
-  </strong>
-
-  <h3>Cadastro profissional em todas as regiões</h3>
-
-  <p style={{
-    color: '#334155',
-    fontSize: '0.95rem',
-    lineHeight: '1.7',
-    marginTop: '12px',
-  }}>
-    Cadastrado como Perito Judicial em Tecnologia da
-    Informação nos 24 Tribunais Regionais do Trabalho
-    do Brasil, da 1ª à 24ª Região, com disponibilidade
-    para futuras nomeações judiciais.
-  </p>
-
-  <p style={{
-    marginTop: '12px',
-    color: '#64748b',
-    lineHeight: '1.6',
-  }}>
-    Cadastro profissional para futuras nomeações.
-    Até o momento, sem nomeações recebidas na
-    Justiça do Trabalho.
-  </p>
-</div>
-      
             <div className="coverage-content">
 
               <div className="map-card">
@@ -924,9 +885,8 @@ const maiorNumeroNomeacoes =
           </div>
         </section>
 
-          <TrabalhoSection />
 
-        <RadarNews />
+      
 
         
        {/* CONTATO */}

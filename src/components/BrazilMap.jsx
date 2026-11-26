@@ -8,10 +8,7 @@ import {
 
 import { geoMercator } from 'd3-geo'
 
-import {
-  estadosSemCadastro,
-  periciasAtivas,
-} from '../data/pericias'
+import { estadosSemCadastro } from '../data/pericias'
 
 
 const geoUrl =
@@ -67,6 +64,7 @@ function prepararGeoJSONParaD3(data) {
 function BrazilMap({
   onEstadoChange,
   estadoSelecionado,
+  periciasAtivas,
 }) {
   const [geoData, setGeoData] = useState(null)
   const [erro, setErro] = useState(false)

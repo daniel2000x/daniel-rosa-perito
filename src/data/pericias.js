@@ -109,7 +109,7 @@ export const periciasAtivas = {
 
       {
         nome: 'Socorro',
-        quantidade: 1,
+        quantidade: 2,
         varas: [
           '2ª Vara Cível de Socorro',
         ],

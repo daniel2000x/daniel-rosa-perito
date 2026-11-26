@@ -11,11 +11,10 @@ import ComoFuncionaPericia from './components/ComoFuncionaPericia'
 import AssistenteForense from './components/AssistenteForense'
 import RadarNews, { RadarLink } from './components/RadarNews'
 
-import {
-  estadosSemCadastro,
-  periciasAtivas,
-} from './data/pericias'
+import { estadosSemCadastro } from './data/pericias'
+import usePericias from './data/usePericias'
 function App() {
+  const periciasAtivas = usePericias()
   const [estadoSelecionado, setEstadoSelecionado] =
     useState(null)
 
@@ -665,9 +664,10 @@ const maiorNumeroNomeacoes =
             <div className="coverage-content">
 
               <div className="map-card">
- <BrazilMap
+<BrazilMap
   onEstadoChange={setEstadoSelecionado}
   estadoSelecionado={estadoSelecionado}
+  periciasAtivas={periciasAtivas}
 />
 
 <div className="coverage-ranking">
